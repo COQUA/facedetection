@@ -2,24 +2,30 @@
 <html>
 <head>
     <title>Face Detection Demo</title>
-    <style>
-        video, canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: scaleX(-1);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <video id="video" autoplay playsinline width="640" height="480"></video>
-        <canvas id="canvas" width="640" height="480"></canvas>
+        <div class="interfaz">
+        <div class="camara">
+            <div id="video-container">
+                <video id="video" autoplay playsinline width="640" height="480"></video>
+                <canvas id="canvas" width="640" height="480"></canvas>
+                <div id="overlay">
+                    <p>Encienda su cámara para probar el modelo :)</p>
+                </div>
+            </div>
+            <button id="controlCamara"><img src="assets/camera-video-fill.svg" alt=""></button>
+        </div>
+
+        <div class="panel-control">
+            <h1>Panel de Control</h1>
+        </div>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-detection"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
-        
+        <script src="script.js"></script>
     </body>
-    <script src="script.js"></script>
 </html>

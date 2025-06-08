@@ -1,0 +1,103 @@
+body {
+        background-color: rgb(30, 30, 30);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+}
+
+.interfaz {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        gap: 40px;
+}
+
+.camara {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+}
+
+#video-container {
+        position: relative;
+        width: 640px;
+        height: 480px;
+        top: 12%;
+        left: 10%;
+        border: 5px solid rgb(56, 52, 183);
+        border-radius: 20px;
+        box-sizing: content-box;
+        padding: 8px;
+        background-color: rgb(28, 28, 28);
+}
+
+video, canvas{
+        position: absolute;
+        width: 640px;
+        height: 480px;
+        border-radius: 10px;
+        transform: scaleX(-1);
+        z-index: 1;
+}
+
+canvas {
+        z-index: 2;
+        pointer-events: none;
+}
+
+#overlay {
+        top: 0;
+        left: 0;
+        width: 640px;
+        height: 480px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        visibility: hidden;
+}
+
+#controlCamara {
+        border: none;
+        padding: 15px;
+        border-radius: 100px;
+        cursor: pointer;
+        background-color: white;
+        transition: background-color 0.3s;
+        margin-top: 10vh;
+        margin-left: 18vh;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#controlCamara img {
+        width: 24px;
+        height: 24px;
+}
+
+#controlCamara:hover {
+        background-color: rgb(192, 192, 192);
+}
+
+.panel-control {
+        border: 5px solid rgb(209, 209, 209);
+        background-color: rgb(40, 40, 40);
+        width: 100vh;
+        height: 90vh;
+        margin-left: 10vh;
+        border-radius: 20px;
+        color: white;
+        
+}
+
+.panel-control h1 {
+        text-align: center;
+}
