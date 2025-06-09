@@ -35,7 +35,13 @@ async function setupCamera() {
 
     model = await faceDetection.createDetector(
         faceDetection.SupportedModels.MediaPipeFaceDetector,
-        {runtime: 'tfjs'}
+        {
+            runtime: 'tfjs',
+            modelType: 'short',
+            maxFaces: 10,
+            minDetectionConfidence: 0.5,
+
+        }
     );
     detectFaces();
 }
