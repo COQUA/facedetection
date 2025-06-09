@@ -1,6 +1,6 @@
 body {
-        background-color: rgb(30, 30, 30);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(16, 16, 16);
+        font-family: 'Franklin Gothic Medium', sans-serif;
         margin: 0;
         padding: 0;
 }
@@ -52,7 +52,7 @@ canvas {
         width: 640px;
         height: 480px;
         border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(58, 58, 58, 0.6);
         color: white;
         font-size: 18px;
         text-align: center;
@@ -100,4 +100,21 @@ canvas {
 
 .panel-control h1 {
         text-align: center;
+}
+
+.controles {
+        margin-top: 50px;
+        margin-left: 30px;
+        font-size: 1.5rem;
+}
+
+.controles p{
+        background-color: rgb(92, 92, 92);
+        width: 50vh;
+        padding: 10px;
+        border-radius: 100px;
+}
+
+input{
+        margin-left: 5px;
 }
