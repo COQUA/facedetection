@@ -1,8 +1,9 @@
 body {
-        background-color: rgb(16, 16, 16);
-        font-family: 'Franklin Gothic Medium', sans-serif;
+        background-color: #101010;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
+        color: #fff;
 }
 
 .interfaz {
@@ -23,16 +24,17 @@ body {
         position: relative;
         width: 640px;
         height: 480px;
-        top: 12%;
-        left: 10%;
-        border: 5px solid rgb(56, 52, 183);
+        border: 4px solid #3834b7;
         border-radius: 20px;
         box-sizing: content-box;
         padding: 8px;
-        background-color: rgb(28, 28, 28);
+        background-color: #1c1c1c;
+        box-shadow: 0 0 20px rgba(56, 52, 183, 0.5);
+        margin-left: 20vh;
+        margin-top: 10vh;
 }
 
-video, canvas{
+video, canvas {
         position: absolute;
         width: 640px;
         height: 480px;
@@ -68,14 +70,19 @@ canvas {
         padding: 15px;
         border-radius: 100px;
         cursor: pointer;
-        background-color: white;
-        transition: background-color 0.3s;
-        margin-top: 10vh;
+        background-color: #ffffff;
+        transition: background-color 0.3s, transform 0.2s;
         margin-left: 18vh;
         width: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#controlCamara:hover {
+        background-color: #cccccc;
+        transform: scale(1.05);
 }
 
 #controlCamara img {
@@ -83,38 +90,61 @@ canvas {
         height: 24px;
 }
 
-#controlCamara:hover {
-        background-color: rgb(192, 192, 192);
-}
-
 .panel-control {
-        border: 5px solid rgb(209, 209, 209);
-        background-color: rgb(40, 40, 40);
-        width: 100vh;
-        height: 90vh;
-        margin-left: 10vh;
+        background: linear-gradient(145deg, #2c2c2c, #1f1f1f);
+        border: 2px solid #555;
         border-radius: 20px;
-        color: white;
-        
+        width: 90vh;
+        height: 88vh;
+        margin-left: 10vh;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
 }
 
 .panel-control h1 {
         text-align: center;
+        color: #00bfff;
+        font-size: 2rem;
+        margin-bottom: -20px;
 }
 
 .controles {
-        margin-top: 50px;
-        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
         font-size: 1.5rem;
 }
 
-.controles p{
-        background-color: rgb(92, 92, 92);
-        width: 50vh;
+.controles p {
+        background-color: #292929;
         padding: 10px;
-        border-radius: 100px;
+        border-radius: 15px;
+        border: 1px solid #444;
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.05);
+        transition: background-color 0.3s;
+        margin-bottom: -4px;
 }
 
-input{
-        margin-left: 5px;
+.controles p:hover {
+        background-color: #383838;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+        transform: scale(1.3);
+        margin-right: 10px;
+        accent-color: #00bfff;
+}
+
+input[type="color"] {
+        border: none;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        margin-left: 10px;
+        cursor: pointer;
 }

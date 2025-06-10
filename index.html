@@ -20,23 +20,26 @@
         <div class="panel-control">
             <h1>Panel de Control</h1>
             <div class="controles">
-                <p id="estadoCamara">Estado de Camára: Encendida</p>
-                <p id="cantidadCaras">Rostros detectados: 0</p>
+                <p id="estadoCamara"><b>Estado de Cámara:</b> Encendida</p>
+                <p id="cantidadCaras"><b>Caras detectadas:</b> 0</p>
 
                 <label>
-                    <p>Mostrar cuadrado<input type="checkbox" id="habilitarCuadrado" checked></p>                    
+                    <p><b>Mostrar cuadrado  <input type="checkbox" id="habilitarCuadrado" checked></p>                    
                 </label>
                 <label>
-                    <p>Puntos de Cara <input type="checkbox" id="habilitarPuntosDeCara" checked></p>
+                    <p><b>Puntos de Cara</b>  <input type="checkbox" id="habilitarPuntosDeCara" checked></p>
                 </label>
                 <label>
-                    <p>Espejar Video <input type="checkbox" id="espejarVideo" checked></p>
+                    <p><b>Medir distancia entre ojos</b>  <input type="checkbox" id="distanciaOjos"></p>
                 </label>
                 <label>
-                    <p>Color de Rectángulo: <input type="color" id="colorRectangulo" value="#17ed27"></p>
+                    <p><b>Mostrar regiones faciales</b>  <input type="checkbox" id="regionesFaciales"></p>
                 </label>
                 <label>
-                    <p>Color de Puntos: <input type="color" id="colorPuntos" value="#004dff"></p>
+                    <p><b>Color de Rectángulo:</b>  <input type="color" id="colorRectangulo" value="#17ed27"></p>
+                </label>
+                <label>
+                    <p><b>Color de Puntos:</b> <input type="color" id="colorPuntos" value="#004dff"></p>
                 </label>
             </div>
         </div>
